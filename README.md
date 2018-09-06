@@ -18,20 +18,20 @@ To uninstall simply delete the [plugin files](update.ini).
 
 ## How do I use lister plugin?
 
-Creata a `[lister  path mode style]` shortcut.
+Create a a `[lister  path mode style]` shortcut.
 
 The following arguments are available
 
-**path** points *from the root* to the folder you want to list.
+`path` points *from the root* to the folder you want to list.
 
-**mode** (optional) is `0` if not used. 
+`mode` (optional) is `0` if not used. 
 
 - Value `0`: Only the `TitlePreview` or `Title` is displayed as a link.
 - Value `1`: Additionally, the text of the file is displayed up to the `[--more--]` tag. If missing, the whole file is displayed.
 
 > Mode `1` adds some css style to increase the font-size of the title (link) to 120% of standard inside the list.
 
-**style** (optional) is a class style for the `div` enclosing the list. 
+`style` (optional) is a class style for the `div` enclosing the list. 
 
 
 ##### TitlePreview?
@@ -75,4 +75,4 @@ encloses the list of the first example with `<div class="myclass">` instead of `
 
 ## Developer
 
-[Norbert Simon](https://nosi.de)
+[Norbert Simon](https://nosi.de) based on [Datenstrom yellow-preview-plugin](https://github.com/datenstrom/yellow-plugins/tree/master/preview)
