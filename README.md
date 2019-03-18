@@ -61,4 +61,4 @@ Encloses the list of the first example with `<div class="myclass">` instead of `
 
 ## Developer
 
-[Norbert Simon](https://nosi.de) based on [Datenstrom yellow-preview-plugin](https://github.com/datenstrom/yellow-plugins/tree/master/preview)
+[Norbert Simon](https://nosi.de) based on [Datenstrom Yellow Preview Extension](https://github.com/datenstrom/yellow-extensions/tree/master/features/preview)
