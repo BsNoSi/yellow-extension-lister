@@ -5,7 +5,7 @@
 // This file may be used and distributed under the terms of the public license.
 
 class YellowLister {
-    const VERSION = "1.1";
+    const VERSION = "1.1.0";
     const TYPE = "feature";
     public $yellow;         //access to API
 
