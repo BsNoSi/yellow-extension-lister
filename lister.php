@@ -34,7 +34,7 @@ class YellowLister {
                     if (empty($title)) $title = $page->get("title");
                     $output .= "<li><a href=\"".$page->getLocation(true)."\">";
                     $output .= htmlspecialchars($title)."</a>";
-                    if($mode == "1") $output .= "<br>".$this->yellow->toolbox->createTextDescription($page->getContent(), 0, false, "<!--more-->", " <a href=\"".$page->getLocation(true)."\">".$this->yellow->text->getHtml("blogMore")."</a>");
+                    if ($mode == "1") $output .= "<br>".$this->yellow->toolbox->createTextDescription($page->getContent(), 0, false, "<!--more-->", " <a href=\"".$page->getLocation(true)."\">".$this->yellow->text->getHtml("blogMore")."</a>");
                     $output .= "</li>\n";
                 }
                 $output .= "</ul>\n";
