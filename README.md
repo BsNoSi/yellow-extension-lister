@@ -14,12 +14,11 @@ To uninstall delete the [extension files](extension.ini).
 
 Create a `[lister]` shortcut. 
 
-The following arguments are available, all arguments are optional:
+The following arguments are available, all but the first argument are optional:
 
-`Location` = points *from the root* to the folder you want to list. Uses current folder if empty.  
+`Location` = points *from the root* to the folder you want to list.  
 `Mode` = Page display mode (default: 0).  
 `Style` = Lister style
-
 
 Lister creates a Linklist to all files (exept Status "hidden") of a folder.
 
@@ -44,6 +43,7 @@ titlePreview: This is an alternative title
 Layout: wiki
 …
 ```
+
 This can useful for replacement of (too) long titles or for better explanation of content in the generated list.
 
 ## Example
