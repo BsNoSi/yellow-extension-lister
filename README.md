@@ -5,7 +5,7 @@ List all pages from a specific location.
 ## How to install extension
 
 1. [Download and install Datenstrom Yellow](https://github.com/datenstrom/yellow/).
-2. [Download extension](https://github.com/bsnosi/yellow-plugin-lister/archive/master.zip). If you are using Safari, right click and select 'Download file as'.
+2. [Download extension](https://github.com/bsnosi/yellow-extension-lister/archive/master.zip). If you are using Safari, right click and select 'Download file as'.
 3. Copy `yellow-plugin-lister-master.zip` into your `system/extensions` folder.
 
 To uninstall delete the [extension files](extension.ini).
