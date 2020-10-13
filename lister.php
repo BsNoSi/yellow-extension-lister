@@ -5,8 +5,8 @@
 // This file may be used and distributed under the terms of the public license.
 
 class YellowLister {
-    const VERSION = "1.1.0";
-    const TYPE = "feature";
+    const VERSION = "1.2.0";
+    
     public $yellow;         //access to API
 
     // Handle initialisation
@@ -18,7 +18,7 @@ class YellowLister {
     public function onParseContentShortcut($page, $name, $text, $type) {
         $output = null;
         if ($name=="lister" && ($type=="block" || $type=="inline")) {
-            list($location, $mode, $style) = $this->yellow->toolbox->getTextArgs($text);
+            list($location, $mode, $style, $reverse) = $this->yellow->toolbox->getTextArgs($text);
             if (empty($location)) $location = $page->location;
             if (strempty($mode)) $mode = "0";
             if (empty($style)) $style = "lister";
@@ -29,6 +29,7 @@ class YellowLister {
                 if ($mode == "1") $output .= "<style> .".$style." ul li > a:first-child {font-size: 1.2em;}</style>";
                 $output .= "<div class=\"".htmlspecialchars($style)."\">\n";
                 $output .= "<ul>\n";
+		    if ($reverse == "r") $pages =  $pages->reverse();
                 foreach ($pages as $page) {
                     $title = $page->get("titlePreview");
                     if (empty($title)) $title = $page->get("title");
