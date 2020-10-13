@@ -1,5 +1,8 @@
-Lister 1.1.0
+Lister 1.2.0
 ============
+
+> Tested with Yellow 0.815
+
 List all pages from a specific location.
 
 ## How to install extension
@@ -19,6 +22,7 @@ The following arguments are available, all but the first argument are optional:
 `Location` = points *from the root* to the folder you want to list.  
 `Mode` = Page display mode (default: 0).  
 `Style` = Lister style
+`Reverse` = Reverse list order (default: no, reverse with "r")
 
 Lister creates a Linklist to all files (exept Status "hidden") of a folder.
 
@@ -58,6 +62,17 @@ Creates a list of titles (titlePreview, if available) with increased font size a
 Encloses the list of the first example with `<div class="myclass">` instead of `<div class="lister">`:
 
     [lister /faq/ - myclass]
+    
+Reverse previous sample:
+
+    [lister /faq/ - myclass r]
+
+
+## History
+
+2020-10-13: Reverse order added
+
+2019-04-23: Initial release
 
 ## Developer
 
