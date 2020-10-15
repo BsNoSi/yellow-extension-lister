@@ -1,4 +1,4 @@
-Lister 1.2.0
+Lister 1.3.0
 ============
 
 > Tested with Yellow 0.815
@@ -69,6 +69,8 @@ Reverse previous sample:
 
 
 ## History
+
+2020-10-15: Some small bugfixes after testing.
 
 2020-10-13: Reverse order added
 
