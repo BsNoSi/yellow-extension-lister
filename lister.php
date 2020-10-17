@@ -5,7 +5,7 @@
 // This file may be used and distributed under the terms of the public license.
 
 class YellowLister {
-   const VERSION = "1.3.0";
+   const VERSION = "1.3.1";
 
    public $yellow; //access to API
 
@@ -18,7 +18,7 @@ class YellowLister {
    public function onParseContentShortcut($page, $name, $text, $type) {
       $output = null;
       if ($name == "lister" && ($type == "block" || $type == "inline")) {
-         list($location, $mode, $style, $reverse) = $this->yellow->toolbox->getTextArgs($text);
+         list($location, $mode, $style, $reverse) = $this->yellow->toolbox->getTextArguments($text);
          if (empty($location))
             $location = $page->getLocation();
 	      $location = substr($location, 0, strrpos( $location, '/')) . "/";
@@ -45,7 +45,7 @@ class YellowLister {
                $output .= "<li><a href=\"".$page->getLocation(true)."\">";
                $output .= htmlspecialchars($title)."</a>";
                if ($mode == "1")
-                  $output .= "<br>".$this->yellow->toolbox->createTextDescription($page->getContent(), 0, false, "<!--more-->", " <a href=\"".$page->getLocation(true)."\">".$this->yellow->text->getHtml("blogMore")."</a>");
+                  $output .= "<br>".$this->yellow->toolbox->createTextDescription($page->getContent(), 0, false, "<!--more-->", " <a href=\"".$page->getLocation(true)."\">".$this->yellow->language->getTextHtml("blogMore")."</a>");
                $output .= "</li>\n";
             }
             $output .= "</ul>\n";
