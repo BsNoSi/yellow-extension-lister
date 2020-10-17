@@ -24,7 +24,7 @@ To uninstall delete the [extension files](extension.ini).
 | :---: | :--- |
 | location | If empty path of current file or points *from the root* to the folder to list. |
 | mode | display mode<br/> default 0 = empty: `TitlePreview` or `Title` as link.<br/>1: Additional teaser display upt to `[--more--]`and `readmore`-link.<br/>If `[--more--]` is missing, the whole file is displayed. |
-| mode | If `1` some css style is added to increase the font-size of the title (link) to 120% of standard inside the list. |
+| style | If `1` some css style is added to increase the font-size of the title (link) to 120% of standard inside the list. |
 | reverse | If `r` list direction is Z-A instead A-Z of pages (depending on file name) |
 
 Lister creates a Linklist to all files (exept Status "hidden") of a folder.
@@ -44,22 +44,15 @@ Layout: wiki
 
 This can useful for replacement of (too) long titles or for better explanation of content in the generated list.
 
-## Example
-Creates a list of titles (titlePreview, if available):
+## Examples
 
-    [lister /faq/]
-
-Creates a list of titles (titlePreview, if available) with increased font size and adds the teaser of the file below the title(Preview):
-
-    [lister /faq/ 1]
-
-Encloses the list of the first example with `<div class="myclass">` instead of `<div class="lister">`:
-
-    [lister /faq/ - myclass]
-    
-Reverse previous sample:
-
-    [lister /faq/ - myclass r]
+| Parameter | Function |
+| :---: | :--- |
+| [lister /faq/] | Lists all pages of folder `/faq/` and use `title` or `titlePreview` |
+| [lister /faq/ 1] | Creates a list of titles (titlePreview, if available) with file teaser |
+| [lister /faq/ 1 1] | Like previous, with increased font size to 120% | 
+| [lister /faq/ 1 myclass] | Like previous but instead of font increase the given style is used<br/>Note: A created list is enclosed by `class="lister` if no style is given. |
+| [lister /faq/ - - r] | List is displayed reverse (Z-A) depending on *file name* |
 
 
 ## History
