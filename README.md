@@ -1,11 +1,14 @@
-Lister 1.3.0
-============
+# Lister 
 
-> Tested with Yellow 0.815
+Version 1.3.1
 
-List all pages from a specific location.
+> Tested with core version 0.8.23
 
-## How to install extension
+## Application
+
+List all pages as simple or teaser list from a specified location.
+
+## Install
 
 1. [Download and install Datenstrom Yellow](https://github.com/datenstrom/yellow/).
 2. [Download extension](https://github.com/bsnosi/yellow-extension-lister/archive/master.zip). If you are using Safari, right click and select 'Download file as'.
@@ -13,29 +16,20 @@ List all pages from a specific location.
 
 To uninstall delete the [extension files](extension.ini).
 
-## How to create page lists
+## Usage
 
-Create a `[lister]` shortcut. 
-
-The following arguments are available, all but the first argument are optional:
-
-`Location` = points *from the root* to the folder you want to list.  
-`Mode` = Page display mode (default: 0).  
-`Style` = Lister style
-`Reverse` = Reverse list order (default: no, reverse with "r")
+     [lister "location" "mode" "style" "reverse"]
+     
+| Parameter | Function |
+| :---: | :--- |
+| location | If empty path of current file or points *from the root* to the folder to list. |
+| mode | display mode<br/> default 0 = empty: `TitlePreview` or `Title` as link.<br/>1: Additional teaser display upt to `[--more--]`and `readmore`-link.<br/>If `[--more--]` is missing, the whole file is displayed. |
+| mode | If `1` some css style is added to increase the font-size of the title (link) to 120% of standard inside the list. |
+| reverse | If `r` list direction is Z-A instead A-Z of pages (depending on file name) |
 
 Lister creates a Linklist to all files (exept Status "hidden") of a folder.
 
-I wanted a simple way of displaying a self-maintaining faq list. It should be possible to have only the headlines or additional text up to the `[--more--]` tag.
-
-The following modes are available: 
-
-- Value `0`: Only the `TitlePreview` or `Title` is displayed as a link.
-- Value `1`: Additionally, the text of the file is displayed up to the `[--more--]` tag. If missing, the whole file is displayed.
-
-> Mode `1` adds some css style to increase the font-size of the title (link) to 120% of standard inside the list.
-
-### TitlePreview?
+## Title Replacement
 
 `TitlePreview` is an *alternative* Headline instead of the standard headline of a page. It has to be set up in the header area of the yellow file.
 
@@ -69,6 +63,8 @@ Reverse previous sample:
 
 
 ## History
+
+2020-10-17: API changes applied
 
 2020-10-15: Some small bugfixes after testing.
 
