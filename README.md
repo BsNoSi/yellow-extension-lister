@@ -1,6 +1,6 @@
 # Lister 
 
-Version 1.3.1
+Version 1.4.0
 
 > Tested with core version 0.8.23
 
@@ -18,15 +18,14 @@ To uninstall delete the [extension files](extension.ini).
 
 ## Usage
 
-     [lister "location" "mode" "style" "reverse"]
+     [lister "location" "mode" "style" "sort"]
      
 | Parameter | Function |
 | :---: | :--- |
 | location | If empty path of current file or points *from the root* to the folder to list. |
 | mode | display mode<br/> default 0 = empty: `TitlePreview` or `Title` as link.<br/>1: Additional teaser display upt to `[--more--]`and `readmore`-link.<br/>If `[--more--]` is missing, the whole file is displayed. |
 | style | If `1` some css style is added to increase the font-size of the title (link) to 120% of standard inside the list. |
-| reverse | If `r` list direction is Z-A instead A-Z of pages (depending on file name) |
-
+| sort | `-`: depending on file name (default)<br/>`m`: modification date, recent → old<br/>`o`: modification date, old → recent<br/>`p`: publishing date, latest → first<br/>`f`: publishing date, first → latest<br/>`a`: Title, a → z<br/>`z`: Title, z → a |	   
 Lister creates a Linklist to all files (exept Status "hidden") of a folder.
 
 ## Title Replacement
@@ -56,6 +55,8 @@ This can useful for replacement of (too) long titles or for better explanation o
 
 
 ## History
+
+2020-10-19: Several sorting options instead of `r` (reverse) only. `r ` no longer valid!
 
 2020-10-17: API changes applied
 
