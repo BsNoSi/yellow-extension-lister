@@ -1,8 +1,8 @@
 # Lister 
 
-Version 1.4.0
+Version 1.4.2
 
-> Tested with core version 0.8.23
+> Tested with Version0.8.33 / Release 0.8.16 of Yellow
 
 ## Application
 
@@ -55,6 +55,8 @@ This can useful for replacement of (too) long titles or for better explanation o
 
 
 ## History
+
+2020-11-21: Alignment to install changes
 
 2020-10-19: Several sorting options instead of `r` (reverse) only. `r ` no longer valid!
 
